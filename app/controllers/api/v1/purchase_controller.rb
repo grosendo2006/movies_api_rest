@@ -22,11 +22,11 @@ module Api
       end
 
       def set_user
-        @user = User.find(purchase_params[:user_id])
+        @user = User.find_by(id: purchase_params[:user_id])
       end
 
       def set_purchase_option
-        @purchase_option = PurchaseOption.find(purchase_params[:purchase_option_id])
+        @purchase_option = PurchaseOption.find_by(id: purchase_params[:purchase_option_id])
       end
     end
   end
