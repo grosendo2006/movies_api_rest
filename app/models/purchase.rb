@@ -5,7 +5,11 @@ class Purchase < ApplicationRecord
   delegate :content, to: :purchase_option
 
   def alive?
-    (expire_date - self.created_at).to_i > 0
+    remaining_time.to_i > 0
+  end
+
+  def remaining_time
+    (expire_date - Time.zone.now)
   end
 
   private
