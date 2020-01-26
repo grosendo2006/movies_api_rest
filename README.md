@@ -42,14 +42,18 @@ Define and implement the following JSON REST API in Ruby:
 # Installation
 
 - Install dependencies:
+
 bundle install
 
 - Setup database:
+
 rails db:setup
 rails db:migrate
 
 - Run local server:
+
 rails server
 
 Runs the app in the development mode.
+
 Open http://localhost:3000 to view it in the browser.
