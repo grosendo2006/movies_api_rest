@@ -19,15 +19,24 @@ again, he will receive an error. 3 days after, if he goes to the library, the mo
 Define and implement the following JSON REST API in Ruby:
 
 1. An endpoint to return the movies, ordered by creation.
+
   GET /api/v1/movies
+
 2. An endpoint to return the seasons ordered by creation, including the list of episodes ordered by its number.
+
   GET /api/v1/seasons
+
 3. An endpoint to return both movies and seasons, ordered by creation.
+
   GET /api/v1/movies_and_seasons
+
 4. An endpoint for a user to perform a purchase of a content.
+
   POST /api/v1/users/1/purchase
   body { purchase_option_id: id}
+
 5. An endpoint to get the library of a user ordered by the remaining time to watch the content.
+
   GET /api/v1/users/1/purchase
 
 # Installation
