@@ -10,6 +10,18 @@ FactoryBot.define do
       video_quality { 'SD' }
     end
 
+    factory :purchase_option_three do
+      price         { 99 }
+      video_quality { 'HD' }
+      association :content, factory: :batman_one
+    end
+
+    factory :purchase_option_four do
+      price         { 99 }
+      video_quality { 'HD' }
+      association :content, factory: :batman_one
+    end
+
     trait :with_movie do
       association :content, factory: :batman_one
     end

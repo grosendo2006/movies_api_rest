@@ -12,11 +12,9 @@ module Api
         def call
           if @purchase_option && @user
             if (@user.in_library?(@purchase_option))
-              @status  = 403
-              @message = 'the user has already bought this option'
+              @status  = 405
+              @message = 'The user has already bought this option'
             else
-              #@user.purchases << Purchase.create(purchase_option: @purchase_option.content,
-              #                                   user: @user)
               @user.purchases.create!(purchase_option: @purchase_option)
               @status  = :created
               @message = @user.errors.any? ? @user.errors.message : 'Success'
